@@ -6,7 +6,7 @@ import os
 
 
 # noinspection PyAttributeOutsideInit
-class DatasetCreator:
+class DatasetCollector:
     def __init__(self, master):
         self.classes = {}
         self.targetImageHeight = 28
@@ -155,6 +155,6 @@ class DatasetCreator:
 
 if __name__ == '__main__':
     root = Tk()
-    DatasetCreator(root)
+    DatasetCollector(root)
     root.title('OCR Dataset Collector')
     root.mainloop()
