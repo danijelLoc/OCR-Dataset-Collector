@@ -156,5 +156,5 @@ class DatasetCreator:
 if __name__ == '__main__':
     root = Tk()
     DatasetCreator(root)
-    root.title('Application')
+    root.title('OCR Dataset Collector')
     root.mainloop()
