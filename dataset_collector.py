@@ -3,6 +3,7 @@ from tkinter import ttk
 from PIL import ImageGrab
 import PIL.Image
 import os
+import random
 
 
 # noinspection PyAttributeOutsideInit
@@ -14,7 +15,7 @@ class DatasetCollector:
         self.datasetLocation = "./dataset/"
         self.datasetTypes = ["train", "test"]
         self.datasetType = StringVar()
-
+        self.penWidths = [17, 22, 25, 27, 30, 34]
         self.master = master
         self.parseConfigurationFile()
         self.createFilesIfNeeded()
@@ -91,6 +92,7 @@ class DatasetCollector:
         self.saveAsImage(imageResized)
         self.saveToCSV()
         self.clear()
+        self.penWidth = self.penWidths[random.randint(0, len(self.penWidths) - 1)]
         self.imageIndex += 1
 
     def saveAsImage(self, image):
